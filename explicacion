@@ -1,0 +1,149 @@
+Declaraciones e Importaciones:
+
+java
+Copy code
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+Se importan las clases necesarias para manipular archivos, trabajar con listas y manejar entradas/salidas.
+
+Clase Producto:
+
+java
+Copy code
+class Producto {
+    private String nombre;
+    private double precio;
+    private int cantidad;
+
+    // Constructor
+    public Producto(String nombre, double precio, int cantidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+
+    // Métodos de acceso (getters)
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    // Método para actualizar la cantidad
+    public void setCantidad(int nuevaCantidad) {
+        this.cantidad = nuevaCantidad;
+    }
+}
+Se crea una clase Producto para representar los productos en el inventario. Tiene atributos como nombre, precio y cantidad, y métodos para obtener y establecer estos atributos.
+
+Clase PulperiaApp:
+
+java
+Copy code
+public class PulperiaApp {
+    private static final String ARCHIVO_INVENTARIO = "inventario.txt";
+    private static final String ARCHIVO_FACTURAS = "facturas.txt";
+
+    private static Scanner scanner = new Scanner(System.in);
+    private static List<Producto> inventario = new ArrayList<>();
+Se declara la clase principal PulperiaApp y se establecen algunas constantes y variables globales como el nombre de los archivos y un escáner para leer la entrada del usuario.
+
+Método principal (main):
+
+java
+Copy code
+public static void main(String[] args) {
+    cargarInventario();
+
+    while (true) {
+        // Menú principal
+        // ...
+    }
+}
+En el método principal, se carga el inventario al inicio y se inicia un bucle que muestra un menú principal hasta que el usuario decide salir.
+
+Cargar Inventario (cargarInventario):
+
+java
+Copy code
+private static void cargarInventario() {
+    // Lógica para cargar productos desde el archivo al inventario
+    // ...
+}
+Este método lee los productos del archivo de inventario (inventario.txt) y los carga en la lista inventario.
+
+Administrar Inventario (administrarInventario):
+
+java
+Copy code
+private static void administrarInventario() {
+    // Menú para administrar el inventario (agregar, mostrar, etc.)
+    // ...
+}
+Este método permite al usuario administrar el inventario, incluyendo opciones para agregar productos y mostrar el inventario.
+
+Agregar Producto (agregarProducto):
+
+java
+Copy code
+private static void agregarProducto() {
+    // Lógica para agregar un producto al inventario y al archivo
+    // ...
+}
+Aquí se solicita al usuario información sobre un nuevo producto y se agrega tanto a la lista en memoria como al archivo.
+
+Mostrar Inventario (mostrarInventario):
+
+java
+Copy code
+private static void mostrarInventario() {
+    // Lógica para mostrar el inventario en la consola
+    // ...
+}
+Este método imprime en consola el contenido del inventario.
+
+Realizar Venta (realizarVenta):
+
+java
+Copy code
+private static void realizarVenta() {
+    // Lógica para realizar una venta y actualizar el inventario y las facturas
+    // ...
+}
+En este método, el usuario puede vender productos, y se actualiza la cantidad en el inventario y se registra la venta en el archivo de facturas.
+
+Mostrar Facturas (mostrarFacturas):
+
+java
+Copy code
+private static void mostrarFacturas() {
+    // Lógica para mostrar las facturas almacenadas
+    // ...
+}
+Este método muestra las facturas almacenadas en el archivo correspondiente.
+
+Entrada de Datos (getIntInput, getDoubleInput, getStringInput):
+
+java
+Copy code
+// Métodos para obtener diferentes tipos de entrada del usuario con validaciones
+Estos métodos ayudan a obtener entrada del usuario y realizar algunas validaciones básicas.
+
+Guardar Inventario (guardarInventario):
+
+java
+Copy code
+private static void guardarInventario() {
+    // Lógica para guardar el inventario en el archivo
+    // ...
+}
+Este método guarda la lista del inventario en el archivo de inventario antes de salir del programa.
+
+Espero que esta explicación te sea útil. Si tienes preguntas específicas sobre alguna parte del código o sobre algún concepto en particular, no dudes en preguntar.
